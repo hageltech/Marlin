@@ -583,6 +583,11 @@
     #define FAN_PIN            4 // IO pin. Buffer needed
   #endif
 
+  #if MOTHERBOARD == 34
+    // Haim's setup: instead of servos
+    #define FAN_PIN            4
+  #endif
+
   #if MOTHERBOARD == 77
     #define FAN_PIN            8
   #endif
@@ -652,18 +657,20 @@
   #define TEMP_BED_PIN       14   // ANALOG NUMBERING
 
   #ifdef NUM_SERVOS
-    #define SERVO0_PIN         11
+    #define SERVO0_PIN         7
 
     #if NUM_SERVOS > 1
       #define SERVO1_PIN         6
     #endif
 
     #if NUM_SERVOS > 2
-      #define SERVO2_PIN         5
+      // Fan control on pins 5 and 4
+      #define SERVO2_PIN         -1
     #endif
 
     #if NUM_SERVOS > 3
-      #define SERVO3_PIN         4
+      // Fan control on pins 5 and 4
+      #define SERVO3_PIN         -1
     #endif
   #endif
 

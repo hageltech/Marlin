@@ -73,7 +73,7 @@
 // 88 = 5DPrint D8 Driver Board
 
 #ifndef MOTHERBOARD
-#define MOTHERBOARD 33
+#define MOTHERBOARD 34
 #endif
 
 // Define this to set a custom name for your generic Mendel,
@@ -135,7 +135,7 @@
 #define TEMP_SENSOR_0 5
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
-#define TEMP_SENSOR_BED 1
+#define TEMP_SENSOR_BED 99
 
 // This makes temp sensor 1 a redundant sensor for sensor 0. If the temperatures difference between these sensors is to high the print will be aborted.
 //#define TEMP_SENSOR_1_AS_REDUNDANT
@@ -375,7 +375,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
   // these are the offsets to the probe relative to the extruder tip (Hotend - Probe)
   #define X_PROBE_OFFSET_FROM_EXTRUDER -29
   #define Y_PROBE_OFFSET_FROM_EXTRUDER 9
-  #define Z_PROBE_OFFSET_FROM_EXTRUDER -11.85
+  #define Z_PROBE_OFFSET_FROM_EXTRUDER -11.8
 
   #define Z_RAISE_BEFORE_HOMING 15       // (in mm) Raise Z before homing (G28) for Probe Clearance.
                                         // Be sure you have this distance over your Z_MAX_POS in case
